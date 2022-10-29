@@ -1,0 +1,176 @@
+:root {
+    --lg-text: 38px;
+    --md-text: 24px;
+    --sm-text: 14px;
+    --white: #ffffff;
+    --black: #000000;
+    --dark: #1d1f31;
+    --semi-light: #8D99AE;
+    --light: #EDF2F4;
+    --semi-red: #EF233C;
+    --red: #D90429;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, var(--dark), var(--semi-light));
+}
+
+/* head */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 80px 30px 50px;
+    display: flex;
+    object-fit: cover;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo-tipografico{
+    font-size: 2vmax;
+    cursor: pointer;
+    color: var(--white);
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    color: var(--white);
+}
+
+nav ul li a:hover,
+nav ul li a.activate{
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* section */
+
+section{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100%;
+    background: center fixed url(./img/tokyo-cityscape-at-night-japan.jpg);
+    background-size: cover;
+}
+
+/* desvanecimiento */
+
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, var(--dark), transparent);
+    z-index: 10;
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* texto */
+
+section .logo-grande {
+    position: absolute;
+    color: var(--white);
+    font-size: 7vmax;
+    text-align: center;
+    font-weight: bold;
+    line-height: 0.8em;
+    white-space: nowrap;
+    transform: translateY(-130px);
+    -webkit-transform: translateY(-130px);
+    -moz-transform: translateY(-130px);
+    -ms-transform: translateY(-130px);
+    -o-transform: translateY(-130px);
+}
+
+/* section scrolling */
+
+
+.sec{
+    background: var(--dark);
+    position: relative;
+    padding: 80px;
+}
+
+.sec h2{
+    color: var(--white);
+    font-size: 2.3vw;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sec p{
+    color: var(--light);
+    font-size: 1.2vw;
+}
+
+
+@media (max-width: 720px) {
+    header .logo-tipografico{
+        display: none;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li{
+        margin-left: 0;
+        margin-top: 15px;
+
+    }
+    section .logo-grande{
+        transform: translateY(-70px);
+        -webkit-transform: translateY(-70px);
+        -moz-transform: translateY(-70px);
+        -ms-transform: translateY(-70px);
+        -o-transform: translateY(-70px);
+}
+}

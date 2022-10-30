@@ -119,10 +119,6 @@ section .logo-grande {
     line-height: 0.8em;
     white-space: nowrap;
     transform: translateY(-130px);
-    -webkit-transform: translateY(-130px);
-    -moz-transform: translateY(-130px);
-    -ms-transform: translateY(-130px);
-    -o-transform: translateY(-130px);
 }
 
 /* section scrolling */
@@ -146,6 +142,48 @@ section .logo-grande {
     font-size: 1.2vw;
 }
 
+.parallax2{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100%;
+    background: center fixed url(./img/alex-knight-5-GNa303REg-unsplash.jpg);
+    background-size: cover;
+}
+
+.parallax3{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100%;
+    background: center fixed url(./img/pema-lama-Lfh0wUAJXpA-unsplash.jpg);
+    background-size: cover;
+}
+
+
+.parallax4{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100%;
+    background: center fixed url(./img/tokyo-kohaku-3gpj2-aEPI4-unsplash.jpg);
+    background-size: cover;
+}
 
 @media (max-width: 720px) {
     header .logo-tipografico{
